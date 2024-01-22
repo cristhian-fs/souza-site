@@ -1,11 +1,11 @@
-import { contactSchema } from "@/components/forms/contact-form";
+import { contactSchema } from "@/components/forms/form-schema";
 import axios, { isAxiosError } from "axios";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const body = await req.json();
-
   try {
+    const body = await req.json();
+
     const { name, email, phone, help, billing } = contactSchema.parse(body);
 
     const response = await axios.post(
@@ -23,6 +23,7 @@ export async function POST(req: Request) {
       data: response.data,
     });
   } catch (err) {
+    console.log(err);
     if (isAxiosError(err)) {
       console.log(err.response?.data);
     }
