@@ -454,7 +454,7 @@ export default function Home() {
             <div className="loadingBar" />
           </div>
           <div className="flex items-center justify-between mt-8">
-            <img src="/svg/logoHero.svg" onload="SVGInject(this)" alt="" />
+            <img src="/svg/logoHero.svg" alt="" />
             <p id="numberLoading" className="text-xl" />
           </div>
         </div>
@@ -468,7 +468,7 @@ export default function Home() {
       >
         <a href="#cases" className="heroButton">
           <button className="w-full md:w-auto px-12 py-4 gradient-button md:flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 hidden maskButtonAnim">
-            <div className="mask-button-text">
+            <div className="mask-button-text whitespace-nowrap">
               <p className="text-[#08060C] first-text">See project</p>
               <p className="text-[#08060C] second-text">See project</p>
             </div>
@@ -492,11 +492,11 @@ export default function Home() {
           </h1>
           <a href="#cases">
             <button className="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 md:hidden maskButtonAnim group transition-all duration-300">
-              <div className="mask-button-text">
+              <div className="mask-button-text whitespace-nowrap">
                 <p className="text-[#08060C] first-text">See project</p>
                 <p className="text-[#08060C] second-text">See project</p>
               </div>
-              <DownArrow className="w-4 h-4 transition-all duration-300 group-hover:translate-x-2" />
+              <RightArrowButton className="w-5 h-5 transition-all duration-300 group-hover:translate-x-2" />
             </button>
           </a>
           <div className="flex items-center justify-center gap-2 mt-12 md:absolute md:bottom-0 md:right-0">
@@ -639,7 +639,7 @@ export default function Home() {
               <a href="/case-motion-insider">
                 <button className="flex items-center gap-2 maskButtonAnim">
                   <FullProject className="w-5 h-5" />
-                  <div className="mask-button-text">
+                  <div className="mask-button-text whitespace-nowrap">
                     <p className=" first-text">Veja completo</p>
                     <p className=" second-text">Veja completo</p>
                   </div>
@@ -679,7 +679,7 @@ export default function Home() {
               <a href="/case-palm-beach">
                 <button className="flex items-center gap-2 maskButtonAnim">
                   <FullProject className="w-5 h-5" />
-                  <div className="mask-button-text">
+                  <div className="mask-button-text whitespace-nowrap">
                     <p className=" first-text">Veja completo</p>
                     <p className=" second-text">Veja completo</p>
                   </div>
@@ -717,7 +717,7 @@ export default function Home() {
                 <a href="/case-bpo-class">
                   <button className="flex items-center gap-2 maskButtonAnim">
                     <FullProject className="w-5 h-5" />
-                    <div className="mask-button-text">
+                    <div className="mask-button-text whitespace-nowrap">
                       <p className=" first-text">Veja completo</p>
                       <p className=" second-text">Veja completo</p>
                     </div>
@@ -752,7 +752,7 @@ export default function Home() {
                 <a href="/case-candy-lips">
                   <button className="flex items-center gap-2 maskButtonAnim">
                     <FullProject className="w-5 h-5" />
-                    <div className="mask-button-text">
+                    <div className="mask-button-text whitespace-nowrap">
                       <p className=" first-text">Veja completo</p>
                       <p className=" second-text">Veja completo</p>
                     </div>
@@ -790,7 +790,7 @@ export default function Home() {
                 <a href="/case-a-ordem">
                   <button className="flex items-center gap-2 maskButtonAnim">
                     <FullProject className="w-5 h-5" />
-                    <div className="mask-button-text">
+                    <div className="mask-button-text whitespace-nowrap">
                       <p className=" first-text">Veja completo</p>
                       <p className=" second-text">Veja completo</p>
                     </div>
@@ -846,7 +846,7 @@ export default function Home() {
           <div className="flex items-center md:flex-1 justify-between mt-8 md:mt-0">
             <a href="/cases">
               <button className="w-full px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full group transition-all duration-300 maskButtonAnim">
-                <div className="mask-button-text">
+                <div className="mask-button-text whitespace-nowrap">
                   <p className="text-[#08060C] first-text">
                     Ver todos os projetos
                   </p>

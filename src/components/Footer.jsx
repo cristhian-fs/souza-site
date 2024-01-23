@@ -65,7 +65,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="w-full flex justify-center items-center order-1 md:order-2 md:w-auto">
-              <a href="#hero" onclick="lenis.scrollTo('#hero')">
+              <a href="#hero">
                 <button className="flex items-center gap-2 pb-1 border-solid border-b border-b-[#0E0D1A] group transition-all duration-300 maskButtonAnim">
                   <div className="mask-button-text">
                     <p className="first-text">Voltar ao topo</p>

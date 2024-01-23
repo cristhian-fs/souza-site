@@ -56,9 +56,9 @@ export default function Cases() {
             <h1 className="text-5xl md:text-8xl revealHeroText">
               USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS
             </h1>
-            <a href="#cases" onclick="lenis.scrollTo('#cases')">
+            <a href="#cases">
               <button className="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 md:hidden maskButtonAnim group transition-all duration-300">
-                <div className="mask-button-text">
+                <div className="mask-button-text whitespace-nowrap">
                   <p className="text-[#08060C] first-text">See project</p>
                   <p className="text-[#08060C] second-text">See project</p>
                 </div>
@@ -147,7 +147,7 @@ export default function Cases() {
                   <a href="/case-motion-insider">
                     <button className="flex items-center gap-2 maskButtonAnim">
                       <FullProject className="w-5 h-5" />
-                      <div className="mask-button-text">
+                      <div className="mask-button-text whitespace-nowrap">
                         <p className=" first-text">Veja completo</p>
                         <p className=" second-text">Veja completo</p>
                       </div>
@@ -183,7 +183,7 @@ export default function Cases() {
                   <a href="/case-palm-beach">
                     <button className="flex items-center gap-2 maskButtonAnim">
                       <FullProject className="w-5 h-5" />
-                      <div className="mask-button-text">
+                      <div className="mask-button-text whitespace-nowrap">
                         <p className=" first-text">Veja completo</p>
                         <p className=" second-text">Veja completo</p>
                       </div>
@@ -215,7 +215,7 @@ export default function Cases() {
                   <a href="/case-candy-lips">
                     <button className="flex items-center gap-2 maskButtonAnim">
                       <FullProject className="w-5 h-5" />
-                      <div className="mask-button-text">
+                      <div className="mask-button-text whitespace-nowrap">
                         <p className=" first-text">Veja completo</p>
                         <p className=" second-text">Veja completo</p>
                       </div>
@@ -247,7 +247,7 @@ export default function Cases() {
                   <a href="/case-a-ordem">
                     <button className="flex items-center gap-2 maskButtonAnim">
                       <FullProject className="w-5 h-5" />
-                      <div className="mask-button-text">
+                      <div className="mask-button-text whitespace-nowrap">
                         <p className=" first-text">Veja completo</p>
                         <p className=" second-text">Veja completo</p>
                       </div>
@@ -278,7 +278,7 @@ export default function Cases() {
                   <a href="/case-bpo-class">
                     <button className="flex items-center gap-2 maskButtonAnim">
                       <FullProject className="w-5 h-5" />
-                      <div className="mask-button-text">
+                      <div className="mask-button-text whitespace-nowrap">
                         <p className=" first-text">Veja completo</p>
                         <p className=" second-text">Veja completo</p>
                       </div>
@@ -312,7 +312,7 @@ export default function Cases() {
                   <a href="/case-pyong-lee">
                     <button className="flex items-center gap-2 maskButtonAnim">
                       <FullProject className="w-5 h-5" />
-                      <div className="mask-button-text text-nowrap">
+                      <div className="mask-button-text whitespace-nowrap text-nowrap">
                         <p className=" first-text">Veja completo</p>
                         <p className=" second-text">Veja completo</p>
                       </div>
@@ -344,7 +344,7 @@ export default function Cases() {
                   <a href="/case-bernardo">
                     <button className="flex items-center gap-2 maskButtonAnim">
                       <FullProject className="w-5 h-5" />
-                      <div className="mask-button-text text-nowrap">
+                      <div className="mask-button-text whitespace-nowrap">
                         <p className=" first-text">Veja completo</p>
                         <p className=" second-text">Veja completo</p>
                       </div>
