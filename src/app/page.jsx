@@ -68,50 +68,6 @@ export default function Home() {
 
       heroSection.addEventListener("mousemove", handleMouseMove);
 
-      let mm = gsap.matchMedia();
-
-      mm.add("(min-width: 768px)", () => {
-        const section06 = document.querySelector(".section06");
-        const letsTalkOverlay = document.querySelector(".letsTalkOverlay");
-
-        if (section06) {
-          const handleMouseMoveLets = (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
-
-            gsap.to(letsTalkOverlay, {
-              "--mouse-x": `${x}px`,
-              "--mouse-y": `${y}px`,
-              duration: 0.2,
-              ease: "power2.out",
-            });
-          };
-
-          section06.addEventListener("mouseover", () => {
-            if (letsTalkOverlay) {
-              gsap.to(letsTalkOverlay, {
-                scale: 1,
-                duration: 0.2,
-                ease: "power2.out",
-              });
-            }
-          });
-          section06.addEventListener("mouseleave", () => {
-            if (letsTalkOverlay) {
-              gsap.to(letsTalkOverlay, {
-                scale: 0,
-                duration: 0.2,
-                ease: "power2.out",
-              });
-            }
-          });
-
-          section06.addEventListener("mousemove", handleMouseMoveLets);
-          return () => {
-            section06.removeAddListener("mousemove", handleMouseMoveLets);
-          };
-        }
-      });
       return () => {
         // Remover o listener do evento quando o componente é desmontado
 
@@ -120,18 +76,67 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+      const section06 = document.querySelector(".section06");
+      const letsTalkOverlay = document.querySelector(".letsTalkOverlay");
+
+      if (section06) {
+        const handleMouseMoveLets = (e) => {
+          const x = e.clientX;
+          const y = e.clientY;
+
+          gsap.to(letsTalkOverlay, {
+            "--mouse-x": `${x}px`,
+            "--mouse-y": `${y}px`,
+            duration: 0.2,
+            ease: "power2.out",
+          });
+        };
+
+        section06.addEventListener("mouseover", () => {
+          if (letsTalkOverlay) {
+            gsap.to(letsTalkOverlay, {
+              scale: 1,
+              duration: 0.2,
+              ease: "power2.out",
+            });
+          }
+        });
+        section06.addEventListener("mouseleave", () => {
+          if (letsTalkOverlay) {
+            gsap.to(letsTalkOverlay, {
+              scale: 0,
+              duration: 0.2,
+              ease: "power2.out",
+            });
+          }
+        });
+
+        section06.addEventListener("mousemove", handleMouseMoveLets);
+        return () => {
+          section06.removeAddListener("mousemove", handleMouseMoveLets);
+        };
+      }
+    });
+  }, []);
+
   gsap.registerPlugin(ScrollTrigger);
 
-  const lenis = new Lenis({
-    duration: 1.5,
-  });
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+    });
 
-  function raf(time) {
-    lenis.raf(time);
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
+  }, []);
 
   useGSAP(() => {
     // ENTERING HERO TEXT ANIMATION

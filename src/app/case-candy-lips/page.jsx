@@ -14,17 +14,22 @@ import useBlurredImageLoader from "../../hooks/usePreload";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 
+import { useEffect } from "react";
+
 export default function CaseCandyLips() {
-  const lenis = new Lenis({
-    duration: 1.5,
-  });
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+    });
 
-  function raf(time) {
-    lenis.raf(time);
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
+  }, []);
 
-  requestAnimationFrame(raf);
   useBlurredImageLoader(".blurred-img");
   return (
     <>
