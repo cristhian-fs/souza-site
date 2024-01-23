@@ -38,6 +38,88 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const heroButton = document.querySelector(".heroButton");
+    const heroSection = document.querySelector(".heroSection");
+
+    if (heroButton && heroSection) {
+      const heroRect = heroSection.getBoundingClientRect();
+      const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+
+      gsap.set(heroButton, {
+        "--mouse-y": `70%`,
+        "--mouse-x": `55%`,
+      });
+
+      const handleMouseMove = (e) => {
+        const x = e.clientX - heroRect.left;
+        const y = e.clientY - heroRect.top;
+
+        const mouseXDelayed = windowWidth * -0.15 + x * 0.3;
+        const mouseYDelayed = windowHeight * -0.15 + y * 0.3;
+
+        gsap.to(heroButton, {
+          "--mouse-x": `calc(55% + ${mouseXDelayed}px)`,
+          "--mouse-y": `calc(70% + ${mouseYDelayed}px)`,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      };
+
+      heroSection.addEventListener("mousemove", handleMouseMove);
+
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        const section06 = document.querySelector(".section06");
+        const letsTalkOverlay = document.querySelector(".letsTalkOverlay");
+
+        if (section06) {
+          const handleMouseMoveLets = (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            gsap.to(letsTalkOverlay, {
+              "--mouse-x": `${x}px`,
+              "--mouse-y": `${y}px`,
+              duration: 0.2,
+              ease: "power2.out",
+            });
+          };
+
+          section06.addEventListener("mouseover", () => {
+            if (letsTalkOverlay) {
+              gsap.to(letsTalkOverlay, {
+                scale: 1,
+                duration: 0.2,
+                ease: "power2.out",
+              });
+            }
+          });
+          section06.addEventListener("mouseleave", () => {
+            if (letsTalkOverlay) {
+              gsap.to(letsTalkOverlay, {
+                scale: 0,
+                duration: 0.2,
+                ease: "power2.out",
+              });
+            }
+          });
+
+          section06.addEventListener("mousemove", handleMouseMoveLets);
+          return () => {
+            section06.removeAddListener("mousemove", handleMouseMoveLets);
+          };
+        }
+      });
+      return () => {
+        // Remover o listener do evento quando o componente é desmontado
+
+        heroSection.removeEventListener("mousemove", handleMouseMove);
+      };
+    }
+  }, []);
+
   gsap.registerPlugin(ScrollTrigger);
 
   const lenis = new Lenis({
@@ -236,32 +318,6 @@ export default function Home() {
           },
         });
       }
-
-      const heroButton = document.querySelector(".heroButton");
-      const heroSection = document.querySelector(".heroSection");
-      const heroRect = heroSection.getBoundingClientRect();
-
-      const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
-
-      gsap.set(heroButton, {
-        "--mouse-y": `70%`,
-        "--mouse-x": `55%`,
-      });
-
-      heroSection.addEventListener("mousemove", (e) => {
-        const x = e.clientX - heroRect.left;
-        const y = e.clientY - heroRect.top;
-
-        const mouseXDelayed = windowWidth * -0.15 + x * 0.3;
-        const mouseYDelayed = windowHeight * -0.15 + y * 0.3;
-
-        gsap.to(heroButton, {
-          "--mouse-x": `calc(55% + ${mouseXDelayed}px)`,
-          "--mouse-y": `calc(70% + ${mouseYDelayed}px)`,
-          duration: 0.5, // Ajuste a duração conforme necessário
-          ease: "power2.out", // Escolha uma função de easing que se ajuste à sensação desejada
-        });
-      });
 
       const section06 = document.querySelector(".section06");
       const letsTalkOverlay = document.querySelector(".letsTalkOverlay");
