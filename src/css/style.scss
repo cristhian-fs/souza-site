@@ -147,7 +147,7 @@ html.lenis {
 
 .toggleContent {
   //border-bottom: 1px solid #505050;
-  transition: 500ms all ease;
+  transition: 800ms all ease;
   overflow: hidden;
   position: relative;
 
@@ -167,11 +167,11 @@ html.lenis {
   }
 
   .arrowToggle {
-    transition: 500ms all ease;
+    transition: 800ms all ease;
   }
   .arrowToggle path {
     fill: #505050;
-    transition: 500ms all ease;
+    transition: 800ms all ease;
   }
   .gradientToggleIcon {
     filter: saturate(0);

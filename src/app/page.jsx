@@ -17,9 +17,11 @@ import { RightArrowButton } from "../svg/RightArrowButton";
 import { FullProject } from "../svg/FullProject";
 import { ArrowDownFullProject } from "../svg/ArrowDownFullProject";
 import React, { useEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 
 // COMPONENTS
-import ServicosToggle from "../components/ServicesToggle";
+import ServicosToggleDesktop from "../components/ServicesToggleDesktop";
+import ServicosToggleMobile from "../components/ServicesToggleMobile";
 
 //gsap
 import { gsap } from "gsap";
@@ -135,6 +137,8 @@ export default function Home() {
 
     requestAnimationFrame(raf);
   }, []);
+
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   useGSAP(() => {
     // ENTERING HERO TEXT ANIMATION
@@ -568,7 +572,7 @@ export default function Home() {
         </h2>
       </section>
       {/* SECTION 03 SERVICES */}
-      <ServicosToggle />
+      {isMobile ? <ServicosToggleMobile /> : <ServicosToggleDesktop />}
       {/* SECTION 04 CASES */}
       <section
         className="px-6 py-14 md:py-36 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto"

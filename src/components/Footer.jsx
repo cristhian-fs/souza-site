@@ -78,10 +78,18 @@ export default function Footer() {
           </div>
           <div className="flex md:w-full items-center justify-between mt-7 md:mt-24 pt-4 md:pt-8 border-t border-t-white">
             {/* TO DO: LINKS DO FOOTER */}
-            <p className="text-sm text-[#828282]">Solucoes</p>
-            <p className="text-sm text-[#828282]">Solucoes</p>
-            <p className="text-sm text-[#828282]">Solucoes</p>
-            <p className="text-sm text-[#828282]">Solucoes</p>
+            <a href="/#hero">
+              <p className="text-sm text-[#828282]">Home</p>
+            </a>
+            <a href="/#services">
+              <p className="text-sm text-[#828282]">Serviços</p>
+            </a>
+            <a href="/#cases">
+              <p className="text-sm text-[#828282]">Cases</p>
+            </a>
+            <a href="/#about">
+              <p className="text-sm text-[#828282]">Sobre</p>
+            </a>
           </div>
         </div>
       </footer>

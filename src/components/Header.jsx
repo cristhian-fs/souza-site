@@ -97,7 +97,7 @@ const Header = () => {
             </a>
           </div>
           <div className="border-b border-b-black overflow-hidden">
-            <a href="#services">
+            <a href="/#services">
               <button className="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
                 <p className="text-base text-black transition-all duration-300 group-hover:translate-x-2">
                   Serviços
@@ -107,7 +107,7 @@ const Header = () => {
             </a>
           </div>
           <div className="border-b border-b-black overflow-hidden">
-            <a href="#cases">
+            <a href="/#cases">
               <button className="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
                 <p className="text-base text-black transition-all duration-300 group-hover:translate-x-2">
                   Cases
@@ -117,7 +117,7 @@ const Header = () => {
             </a>
           </div>
           <div className="border-b border-b-black overflow-hidden">
-            <a href="#about">
+            <a href="/#about">
               <button className="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
                 <p className="text-base text-black transition-all duration-300 group-hover:translate-x-2">
                   Sobre

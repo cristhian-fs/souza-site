@@ -102,7 +102,7 @@ export default function CaseMotionInsider() {
               </div>
             </div>
             <div className="mt-8 flex flex-col md:flex-row gap-8">
-              <div className="h-[271px] md:h-[444px] flex flex-col justify-end align-center pb-6 border-b border-[#999999] md:pb-0 md:border-none md:flex-1">
+              <div className="h-[271px] md:h-[444px] flex flex-col justify-end align-center pb-6 border-0 border-b border-[#999999] md:pb-0 md:border-none md:flex-1">
                 <div
                   className="blurred-img w-full h-full"
                   style={{
@@ -111,7 +111,7 @@ export default function CaseMotionInsider() {
                   }}
                 >
                   <img
-                    src="/img/motionInsiderAssets/casePage/image2.jpg"
+                    src="/img/motionInsiderAssets/casePage/image2.png"
                     className="h-full w-full object-cover"
                     alt=""
                   />
@@ -126,7 +126,7 @@ export default function CaseMotionInsider() {
                   }}
                 >
                   <img
-                    src="/img/motionInsiderAssets/casePage/image3.jpg"
+                    src="/img/motionInsiderAssets/casePage/image3.png"
                     className="h-full w-full object-cover"
                     alt=""
                   />
@@ -168,7 +168,7 @@ export default function CaseMotionInsider() {
                   }}
                 >
                   <img
-                    src="/img/motionInsiderAssets/casePage/projectImageMobile.jpg"
+                    src="/img/motionInsiderAssets/casePage/projectImageMobile.png"
                     className="h-full w-full object-cover"
                     alt=""
                   />

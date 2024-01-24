@@ -8,7 +8,7 @@ import { KeyVisual } from "../svg/KeyVisual";
 import { LancamentoIcon } from "../svg/LancamentosIcon";
 import { ArrowBottomRight } from "../svg/ArrowBottomRight";
 
-const ServicosToggle = () => {
+const ServicosToggleMobile = () => {
   const services = [
     {
       icon: <SitesIcon className="h-8 w-8 gradientToggleIcon sitesELp" />,
@@ -91,4 +91,4 @@ const ServicosToggle = () => {
   );
 };
 
-export default ServicosToggle;
+export default ServicosToggleMobile;

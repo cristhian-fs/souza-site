@@ -146,7 +146,7 @@ export default function CaseAOrdem() {
                 }}
               >
                 <img
-                  src="/img/aOrdem/casePage/image3.jpg"
+                  src="/img/aOrdem/casePage/image3.png"
                   className="h-full w-full object-cover"
                   alt=""
                 />
