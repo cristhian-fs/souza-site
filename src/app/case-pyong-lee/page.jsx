@@ -43,18 +43,13 @@ export default function CasePyongLee() {
           <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
             <video
               className="w-full h-full object-cover"
-              autoPlay=""
-              muted=""
-              loop=""
-            >
-              <source
-                src="/img/herovideo.mp4"
-                id="heroVideo"
-                type="video/mp4"
-                loading="lazy"
-              />
-              Seu navegador não suporta o elemento de vídeo.
-            </video>
+              autoPlay={true}
+              muted={true}
+              loop={true}
+              src="/img/herovideo.mp4"
+              type="video/mp4"
+              id="heroVideo"
+            ></video>
           </div>
           <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
             <h1 className="text-5xl md:text-8xl revealHeroText">

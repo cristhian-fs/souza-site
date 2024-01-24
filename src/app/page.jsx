@@ -495,10 +495,10 @@ export default function Home() {
             autoPlay={true}
             muted={true}
             loop={true}
-          >
-            <source src="/img/herovideo.mp4" id="heroVideo" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
+            src="/img/herovideo.mp4"
+            type="video/mp4"
+            id="heroVideo"
+          ></video>
         </div>
         <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
           <h1 className="text-5xl md:text-8xl revealHeroText">
