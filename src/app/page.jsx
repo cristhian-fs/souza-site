@@ -982,7 +982,9 @@ export default function Home() {
           </div>
           <img src="/img/imagemSouza.jpg" className="imagemBio" alt="" />
         </div>
-        <img src="/svg/letsTalk.svg" className="letsTalkOverlay" alt="" />
+        <a href="https://wa.me/5531975053019?text=Olá+Souza%2C+eu+gostaria+de+um+orçamento">
+          <img src="/svg/letsTalk.svg" className="letsTalkOverlay" alt="" />
+        </a>
       </section>
       {/* SECTION CTA */}
       <section className="px-6 py-14 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto md:flex">
