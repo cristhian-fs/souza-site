@@ -496,7 +496,7 @@ export default function Home() {
             muted={true}
             loop={true}
           >
-            <source src="/img/output35.mp4" id="heroVideo" type="video/mp4" />
+            <source src="/img/herovideo.mp4" id="heroVideo" type="video/mp4" />
             Seu navegador não suporta o elemento de vídeo.
           </video>
         </div>
@@ -548,7 +548,7 @@ export default function Home() {
           muted={true}
           loop={true}
         >
-          <source src="/img/output35.mp4" type="video/mp4" />
+          <source src="/img/herovideo.mp4" type="video/mp4" />
           Seu navegador não suporta o elemento de vídeo.
         </video>
         <h2 className="text-3xl uppercase first-line:block first-line:text-right md:hidden secondHeader relative z-10">

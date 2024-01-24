@@ -47,7 +47,7 @@ export default function CaseBpoClass() {
             loop={true}
           >
             <source
-              src="/img/output35.mp4"
+              src="/img/herovideo.mp4"
               id="heroVideo"
               type="video/mp4"
               loading="lazy"
