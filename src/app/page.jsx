@@ -83,43 +83,41 @@ export default function Home() {
       const section06 = document.querySelector(".section06");
       const letsTalkOverlay = document.querySelector(".letsTalkOverlay");
 
-      if (section06) {
-        const handleMouseMoveLets = (e) => {
-          const x = e.clientX;
-          const y = e.clientY;
+      const handleMouseMoveLets = (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
 
+        gsap.to(letsTalkOverlay, {
+          "--mouse-x": `${x}px`,
+          "--mouse-y": `${y}px`,
+          duration: 0.2,
+          ease: "power2.out",
+        });
+      };
+
+      section06.addEventListener("mouseover", () => {
+        if (letsTalkOverlay) {
           gsap.to(letsTalkOverlay, {
-            "--mouse-x": `${x}px`,
-            "--mouse-y": `${y}px`,
+            scale: 1,
             duration: 0.2,
             ease: "power2.out",
           });
-        };
+        }
+      });
+      section06.addEventListener("mouseleave", () => {
+        if (letsTalkOverlay) {
+          gsap.to(letsTalkOverlay, {
+            scale: 0,
+            duration: 0.2,
+            ease: "power2.out",
+          });
+        }
+      });
 
-        section06.addEventListener("mouseover", () => {
-          if (letsTalkOverlay) {
-            gsap.to(letsTalkOverlay, {
-              scale: 1,
-              duration: 0.2,
-              ease: "power2.out",
-            });
-          }
-        });
-        section06.addEventListener("mouseleave", () => {
-          if (letsTalkOverlay) {
-            gsap.to(letsTalkOverlay, {
-              scale: 0,
-              duration: 0.2,
-              ease: "power2.out",
-            });
-          }
-        });
-
-        section06.addEventListener("mousemove", handleMouseMoveLets);
-        return () => {
-          section06.removeAddListener("mousemove", handleMouseMoveLets);
-        };
-      }
+      section06.addEventListener("mousemove", handleMouseMoveLets);
+      return () => {
+        section06.removeEventListener("mousemove", handleMouseMoveLets);
+      };
     });
   }, []);
 
@@ -219,9 +217,9 @@ export default function Home() {
     const expertName = new SplitType(".aboutName");
 
     if (secondHeaders) {
-      secondHeaders.forEach((char, i) => {
-        const text = new SplitType(char, { types: "chars" });
-        gsap.from(text.chars, {
+      secondHeaders.forEach((word, i) => {
+        const text = new SplitType(word, { types: "word" });
+        gsap.from(text.words, {
           opacity: 0.2,
           stagger: 0.03,
           delay: 0.25,
@@ -444,6 +442,18 @@ export default function Home() {
     ScrollTrigger.refresh();
   }, null);
 
+  useEffect(() => {
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       {/* LOADING SCREEN */}
@@ -466,7 +476,7 @@ export default function Home() {
         className="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden"
         id="hero"
       >
-        <a href="#cases" className="heroButton">
+        <a href="/cases" className="heroButton">
           <button className="w-full md:w-auto px-12 py-4 gradient-button md:flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 hidden maskButtonAnim">
             <div className="mask-button-text whitespace-nowrap">
               <p className="text-[#08060C] first-text">See project</p>
@@ -490,7 +500,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-8xl revealHeroText">
             USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS
           </h1>
-          <a href="#cases">
+          <a href="/cases">
             <button className="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 md:hidden maskButtonAnim group transition-all duration-300">
               <div className="mask-button-text whitespace-nowrap">
                 <p className="text-[#08060C] first-text">See project</p>
@@ -570,65 +580,67 @@ export default function Home() {
         <div className="relative">
           <span className="topBarCase1" />
           <div className="mainCase motionInsiderCase mt-8">
-            <div className="mainCaseThumb flex flex-col justify-end align-center">
-              <div className="motionInsider absolute inset-0 caseThumb">
-                <span className="motionInsiderOverlay" />
-                <img
-                  src="/img/motionInsiderAssets/HERO.webp"
-                  className="heroImg"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/RedVector.svg"
-                  className="redVector"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/linha2.svg"
-                  className="lineMotion"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/overlayLogoReduzida.png"
-                  className="overlayLogo"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/logoReduzida.png"
-                  className="backTextSmallLogo"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/logoReduzida.png"
-                  className="backSmallLogo"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/logoReduzida.png"
-                  className="backSmallLogo2"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/ELIPSE.svg"
-                  className="elipseOverlay"
-                  alt=""
-                />
-                <img
-                  src="/img/motionInsiderAssets/overlayCruzEsq.svg"
-                  className="overlayCruzEsq"
-                  alt=""
-                />
+            <a href="/case-motion-insider">
+              <div className="mainCaseThumb flex flex-col justify-end align-center">
+                <div className="motionInsider absolute inset-0 caseThumb">
+                  <span className="motionInsiderOverlay" />
+                  <img
+                    src="/img/motionInsiderAssets/HERO.webp"
+                    className="heroImg"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/RedVector.svg"
+                    className="redVector"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/linha2.svg"
+                    className="lineMotion"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/overlayLogoReduzida.png"
+                    className="overlayLogo"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/logoReduzida.png"
+                    className="backTextSmallLogo"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/logoReduzida.png"
+                    className="backSmallLogo"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/logoReduzida.png"
+                    className="backSmallLogo2"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/ELIPSE.svg"
+                    className="elipseOverlay"
+                    alt=""
+                  />
+                  <img
+                    src="/img/motionInsiderAssets/overlayCruzEsq.svg"
+                    className="overlayCruzEsq"
+                    alt=""
+                  />
+                </div>
+                <div className="mainCaseSpecs pt-8 relative z-10">
+                  <img
+                    src="/img/motionInsiderAssets/logoMotionInsider.svg"
+                    alt=""
+                  />
+                  <p className="text-base text-[#F3F3F2] mt-4">
+                    Landing Page Lançamento
+                  </p>
+                </div>
               </div>
-              <div className="mainCaseSpecs pt-8 relative z-10">
-                <img
-                  src="/img/motionInsiderAssets/logoMotionInsider.svg"
-                  alt=""
-                />
-                <p className="text-base text-[#F3F3F2] mt-4">
-                  Landing Page Lançamento
-                </p>
-              </div>
-            </div>
+            </a>
             <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
               <div>
                 <p className="text-base font-semibold">
@@ -648,27 +660,30 @@ export default function Home() {
             </div>
           </div>
           <div className="mainCase palmBeachCase absolute inset-0 z-10">
-            <div className="mainCaseThumb flex flex-col justify-end align-center">
-              <div className="palmBeach absolute inset-0 caseThumb">
-                <img
-                  src="/img/palmBeach/FOTO FAMILIA.webp"
-                  className="palmBeachFoto"
-                  alt=""
-                />
-                <img
-                  src="/img/palmBeach/setas-palm-beach.svg"
-                  className="palmBeachArrows"
-                  alt=""
-                />
-                <span className="palmBeachSquare" />
+            <a href="/case-palm-beach">
+              <div className="mainCaseThumb flex flex-col justify-end align-center">
+                <div className="palmBeach absolute inset-0 caseThumb">
+                  <img
+                    src="/img/palmBeach/FOTO FAMILIA.webp"
+                    className="palmBeachFoto"
+                    alt=""
+                  />
+                  <img
+                    src="/img/palmBeach/setas-palm-beach.svg"
+                    className="palmBeachArrows"
+                    alt=""
+                  />
+                  <span className="palmBeachSquare" />
+                </div>
+                <div className="mainCaseSpecs md:w-80 pt-8 relative z-10">
+                  <p className="text-xl font-semibold">Palm Beach</p>
+                  <p className="text-base text-[#F3F3F2] mt-1">
+                    Site institucional
+                  </p>
+                </div>
               </div>
-              <div className="mainCaseSpecs md:w-80 pt-8 relative z-10">
-                <p className="text-xl font-semibold">Palm Beach</p>
-                <p className="text-base text-[#F3F3F2] mt-1">
-                  Site institucional
-                </p>
-              </div>
-            </div>
+            </a>
+
             <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
               <div>
                 <p className="text-base font-semibold">Palm Beach</p>
@@ -692,27 +707,30 @@ export default function Home() {
           <div className="relative md:flex md:flex-1 mt-9">
             <span className="topBarCase2" />
             <div className="mainCase bpoClassCase md:flex-1 opacity-0">
-              <div className="mainCaseThumb flex flex-col justify-end align-center">
-                <div className="absolute inset-0 caseThumb">
-                  <img
-                    src="img/BPO Class Thumb.webp"
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
+              <a href="/case-bpo-class">
+                <div className="mainCaseThumb flex flex-col justify-end align-center">
+                  <div className="absolute inset-0 caseThumb">
+                    <img
+                      src="img/BPO Class Thumb.webp"
+                      className="w-full h-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div className="mainCaseSpecs pt-4 relative z-10">
+                    <p className="text-2xl font-semibold text-nowrap">
+                      BPO CLASS SUMMIT
+                    </p>
+                    <p className="text-base opacity-80">Website design</p>
+                  </div>
                 </div>
-                <div className="mainCaseSpecs pt-4 relative z-10">
-                  <p className="text-base font-semibold">BPO CLASS SUMMIT</p>
-                  <p className="text-base opacity-80">Website design</p>
-                </div>
-              </div>
+              </a>
+
               <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                 <div>
-                  <p className="text-2xl font-medium text-[#F3F3F2]">
-                    BPO Class Submit
+                  <p className="text-base font-medium text-[#F3F3F2]">
+                    BPO Class Summit
                   </p>
-                  <p className="text-base opacity-80 mt-1">
-                    Evento presencial de BPO Financeiro
-                  </p>
+                  <p className="text-base opacity-80 mt-1">Evento presencial</p>
                 </div>
                 <a href="/case-bpo-class">
                   <button className="flex items-center gap-2 maskButtonAnim">
@@ -726,23 +744,26 @@ export default function Home() {
               </div>
             </div>
             <div className="mainCase candyLipsCase absolute inset-0 z-10 md:flex-1">
-              <div className="mainCaseThumb flex flex-col justify-end align-center">
-                <div className="absolute inset-0 caseThumb">
-                  <span className="candyLipsOverlay" />
-                  <img
-                    src="img/CandyLips/candyLips.webp"
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
+              <a href="/case-candy-lips">
+                <div className="mainCaseThumb flex flex-col justify-end align-center">
+                  <div className="absolute inset-0 caseThumb">
+                    <span className="candyLipsOverlay" />
+                    <img
+                      src="img/CandyLips/candyLips.webp"
+                      className="w-full h-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div className="mainCaseSpecs pt-4 relative z-10">
+                    <p className="text-2xl font-semibold">Candy Lips</p>
+                    <p className="text-base opacity-80">Lançamento WebSite</p>
+                  </div>
                 </div>
-                <div className="mainCaseSpecs pt-4 relative z-10">
-                  <p className="text-base font-semibold">Candy Lips</p>
-                  <p className="text-base opacity-80">Lançamento WebSite</p>
-                </div>
-              </div>
+              </a>
+
               <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                 <div>
-                  <p className="text-2xl font-medium text-[#F3F3F2]">
+                  <p className="text-base font-medium text-[#F3F3F2]">
                     Karyn Souza
                   </p>
                   <p className="text-base opacity-80 mt-1">
@@ -764,25 +785,30 @@ export default function Home() {
           <div className="relative md:flex md:flex-1 mt-9">
             <span className="topBarCase3" />
             <div className="mainCase ordemCase md:flex-1">
-              <div className="mainCaseThumb flex flex-col justify-end align-center">
-                <div className="absolute inset-0 caseThumb">
-                  <span className="w-full h-full absolute inset-0 bg-gradient-to-t from-black to-transparent" />
-                  <img
-                    src="img/AOrdemThumb.webp"
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
+              <a href="/case-a-ordem">
+                <div className="mainCaseThumb flex flex-col justify-end align-center">
+                  <div className="absolute inset-0 caseThumb">
+                    <span className="w-full h-full absolute inset-0 bg-gradient-to-t from-black to-transparent" />
+                    <img
+                      src="img/AOrdemThumb.webp"
+                      className="w-full h-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div className="mainCaseSpecs pt-4 relative z-10">
+                    <p className="text-2xl font-medium text-[#F3F3F2]">
+                      A Ordem
+                    </p>
+                    <p className="text-xs text-[#F3F3F2] mt-2">
+                      Mentoria / ID Visual
+                    </p>
+                  </div>
                 </div>
-                <div className="mainCaseSpecs pt-4 relative z-10">
-                  <p className="text-2xl font-medium text-[#F3F3F2]">A Ordem</p>
-                  <p className="text-xs text-[#F3F3F2] mt-2">
-                    Mentoria / ID Visual
-                  </p>
-                </div>
-              </div>
+              </a>
+
               <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                 <div>
-                  <p className="text-2xl font-medium">Gabi Cervantes</p>
+                  <p className="text-base font-medium">Gabi Cervantes</p>
                   <p className="text-base opacity-80 mt-1">
                     KV e Logo para Mentoria
                   </p>
@@ -799,29 +825,30 @@ export default function Home() {
               </div>
             </div>
             <div className="mainCase bernardoCase md:flex-1 absolute inset-0 z-10">
-              <div className="mainCaseThumb flex flex-col justify-end align-center">
-                <div className="absolute inset-0 caseThumb">
-                  <span className="mviOverlay" />
-                  <img
-                    src="img/bernandoCaetano/bernardoCaetano.jpg"
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
+              <a href="/case-bernardo">
+                <div className="mainCaseThumb flex flex-col justify-end align-center">
+                  <div className="absolute inset-0 caseThumb">
+                    <span className="mviOverlay" />
+                    <img
+                      src="img/bernandoCaetano/bernardoCaetano.jpg"
+                      className="w-full h-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div className="mainCaseSpecs pt-4 relative z-10">
+                    <p className="text-2xl font-medium text-[#F3F3F2]">
+                      MVI - Método Infalível de Pagínas
+                    </p>
+                    <p className="text-xs text-[#F3F3F2] mt-2">
+                      Lançamento Web Site
+                    </p>
+                  </div>
                 </div>
-                <div className="mainCaseSpecs pt-4 relative z-10">
-                  <p className="text-2xl font-medium text-[#F3F3F2]">
-                    MVI - Método Infalível de Pagínas
-                  </p>
-                  <p className="text-xs text-[#F3F3F2] mt-2">
-                    Lançamento Web Site
-                  </p>
-                </div>
-              </div>
+              </a>
+
               <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                 <div>
-                  <p className="text-2xl font-medium">
-                    Bernardo Caetano I Agência Tucano
-                  </p>
+                  <p className="text-base font-medium">Agência Tucano</p>
                   <p className="text-base opacity-80 mt-1">
                     Ui Design Landing Page
                   </p>
@@ -837,10 +864,43 @@ export default function Home() {
                 </a>
               </div>
             </div>
+            <div className="mainCase pyongCase md:flex-1 absolute inset-0 z-10">
+              <a href="/case-pyong-lee">
+                <div className="mainCaseThumb flex flex-col justify-end align-center">
+                  <div className="absolute inset-0 caseThumb">
+                    <span className="mviOverlay" />
+                    <img
+                      src="img/pyongLee/pyongLeeImage.jpg"
+                      className="w-full h-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </a>
+              <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
+                <div>
+                  <p className="text-base font-medium">
+                    Nexo 2023 - Pyong Lee e Márcio Martins
+                  </p>
+                  <p className="text-base opacity-80 mt-1">
+                    Ui Design Landing Page / Kv
+                  </p>
+                </div>
+                <a href="/case-pyong-lee">
+                  <button className="flex items-center gap-2 maskButtonAnim">
+                    <FullProject className="w-5 h-5" />
+                    <div className="mask-button-text whitespace-nowrap text-nowrap">
+                      <p className=" first-text">Veja completo</p>
+                      <p className=" second-text">Veja completo</p>
+                    </div>
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mt-12 md:flex md:items-center md:justify-between">
-          <p className="text-xl w-3/4 md:flex-1">
+          <p className="hidden md:block text-xl w-3/4 md:flex-1">
             “66% dos cliques são norteados pelo design
           </p>
           <div className="flex items-center md:flex-1 justify-between mt-8 md:mt-0">
@@ -875,11 +935,7 @@ export default function Home() {
       <section className="section06 relative overflow-hidden" id="about">
         <div className="px-6 py-14 relative md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
           <p className="text-7xl md:text-[213px] uppercase aboutName">
-            Davidson{" "}
-            <span className="font-medium">
-              Souza
-              <span />
-            </span>
+            Davidson <span className="font-medium">Souza</span>
           </p>
           <p className="text-sm md:text-lg text-[#5F5F5F] mt-4 w-1/2">
             Escrevi e transformei diversas histórias através do meu trabalho.
@@ -934,7 +990,7 @@ export default function Home() {
             <p className="text-5xl md:text-6xl uppercase mt-6 md:mt-8">
               Vamos conversar?
             </p>
-            <p className="text-sm md:text-lg text-[#5F5F5F] mt-4 md:mt-8 w-96">
+            <p className="text-sm md:text-lg text-[#5F5F5F] mt-4 md:mt-8 w-96 text-wrap">
               Nos mande uma mensagem, estou pronto para te atender e trazer uma
               solução adequada ao seu negócio! Preencha o formulário que em
               breve retornaremos seu contato.

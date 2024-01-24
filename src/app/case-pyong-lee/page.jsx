@@ -34,132 +34,148 @@ export default function CasePyongLee() {
   return (
     <>
       <Header />
-      {/* HERO */}
-      <main
-        className="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden"
-        id="hero"
-      >
-        <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay={true}
-            muted={true}
-            loop={true}
-          >
-            <source
-              src="/img/output35.mp4"
-              id="heroVideo"
-              type="video/mp4"
-              loading="lazy"
-            />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-        <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
-          <h1 className="text-5xl md:text-8xl revealHeroText">
-            USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS
-          </h1>
-          <div className="flex items-center justify-center gap-2 mt-12 md:absolute md:bottom-0 md:right-0">
-            <p className="">Scroll</p>
-            <DownArrow className="w-4 h-4 transition-all duration-300 group-hover:translate-x-2" />
+      <>
+        {/* HERO */}
+        <main
+          className="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden"
+          id="hero"
+        >
+          <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
+            <video
+              className="w-full h-full object-cover"
+              autoPlay=""
+              muted=""
+              loop=""
+            >
+              <source
+                src="/img/output35.mp4"
+                id="heroVideo"
+                type="video/mp4"
+                loading="lazy"
+              />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
           </div>
-        </div>
-      </main>
-      {/* SECTION CASE */}
-      <section
-        className="px-6 py-14 md:py-36 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto"
-        id="cases"
-      >
-        <h5 className="text-sm uppercase py-2">
-          <span className="text-[#4F4F4F]">03 / </span>cases
-        </h5>
-        <div className="flex flex-col md:gap-8 md:w-full md:mt-8">
-          <div className="relative">
-            <div className="mainCase mt-8 md:flex-1">
-              <div className="h-[271px] md:h-[518px] flex flex-col justify-end align-center">
-                <div
-                  className="blurred-img w-full h-full"
-                  style={{
-                    backgroundImage:
-                      "url(/img/palmBeach/casePage/image1-small.jpg)",
-                  }}
-                >
-                  <img
-                    src="/img/palmBeach/casePage/image1.jpg"
-                    className="h-full w-full object-cover"
-                    alt=""
-                  />
+          <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
+            <h1 className="text-5xl md:text-8xl revealHeroText">
+              USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS
+            </h1>
+            <div className="flex items-center justify-center gap-2 mt-12 md:absolute md:bottom-0 md:right-0">
+              <p className="">Scroll</p>
+              <img src="/svg/down-arrow.svg" alt="" />
+            </div>
+          </div>
+        </main>
+        {/* SECTION CASE */}
+        <section
+          className="px-6 py-14 md:py-36 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto"
+          id="cases"
+        >
+          <h5 className="text-sm uppercase py-2">
+            <span className="text-[#4F4F4F]">03 / </span>cases
+          </h5>
+          <div className="flex flex-col md:gap-8 md:w-full md:mt-8">
+            <div className="relative">
+              <div className="mainCase mt-8 md:flex-1">
+                <div className="h-[271px] md:h-[518px] flex flex-col justify-end align-center">
+                  <div
+                    className="blurred-img w-full h-full"
+                    style={{
+                      backgroundImage:
+                        "url(/img/pyongLee/casePage/image1-small.jpg)",
+                    }}
+                  >
+                    <img
+                      src="/img/pyongLee/casePage/image1.jpg"
+                      className="h-full w-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
+                  <div>
+                    <p className="text-base font-semibold">
+                      Nexo 2023 CDL Summit
+                    </p>
+                    <p className="text-base opacity-80">
+                      Kv evento e UI design Landing page
+                    </p>
+                  </div>
+                  <p className="text-base opacity-80">2023</p>
                 </div>
               </div>
-              <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
-                <div>
-                  <p className="text-base font-semibold">Palm Beach</p>
-                  <p className="text-base opacity-80">
-                    Site Institucional Imobiliário
+              <div className="mt-8 flex flex-col md:flex-row gap-8">
+                <div className="h-[271px] md:h-[444px] md:flex md:flex-col md:justify-end md:align-center pb-6 border-b border-[#999999] md:pb-0 md:border-none hidden md:flex-1">
+                  <div
+                    className="blurred-img w-full h-full"
+                    style={{
+                      backgroundImage:
+                        "url(/img/pyongLee/casePage/image2-small.jpg)",
+                    }}
+                  >
+                    <img
+                      src="/img/pyongLee/casePage/image2.jpg"
+                      className="h-full w-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="h-[271px] md:h-[444px] flex md:hidden flex-col justify-end align-center pb-6 border-b border-[#999999] md:pb-0 md:border-none md:flex-1">
+                  <div
+                    className="blurred-img w-full h-full"
+                    style={{
+                      backgroundImage:
+                        "url(/img/pyongLee/casePage/image2Mobile-small.png)",
+                    }}
+                  >
+                    <img
+                      src="/img/pyongLee/casePage/image2Mobile.png"
+                      className="h-full w-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 flex flex-col md:flex-row gap-8 pb-6 border-b border-[#999999] md:pb-0 md:border-none">
+                <div className="flex flex-col md:flex-1">
+                  <p className="text-base font-semibold text-white">
+                    Evento presencial
+                  </p>
+                  <p className="mt-1 md:mt-8 text-base font-semibold text-white opacity-80">
+                    Evento destaque na cena empresarial de Cachoeira do Su(RS),
+                    a convenção Nexo CDL 2023 reuniu um público de 500 pessoas,
+                    dentre empresários, lojistas, autoridades municipais e
+                    painelistas de renome. Dente as figuras chaves o Head
+                    trainer Marcio Martins e o Hipnotista e empreendedor Pyong
+                    Lee.
                   </p>
                 </div>
-                <p className="text-base opacity-80">2023</p>
+                <div className="flex flex-col md:flex-1">
+                  <p className="text-base font-semibold text-white">Serviços</p>
+                  <p className="mt-1 md:mt-8 text-base font-semibold text-white opacity-80">
+                    Criação de KV do evento e UI design da Landing Page
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="mt-8 flex flex-col md:flex-row gap-8">
-              <div className="h-[271px] md:h-[444px] flex flex-col justify-end align-center pb-6 border-b border-[#999999] md:pb-0 md:border-none md:flex-1">
+              <div className="mt-8 md:mt-32 blurred-img pb-6 border-b border-[#999999]">
                 <div
                   className="blurred-img w-full h-full"
                   style={{
                     backgroundImage:
-                      "url(/img/palmBeach/casePage/image2-small.jpg)",
+                      "url(/img/pyongLee/casePage/image3-small.png)",
                   }}
                 >
                   <img
-                    src="/img/palmBeach/casePage/image2.jpg"
+                    src="/img/pyongLee/casePage/image3.png"
                     className="h-full w-full object-cover"
                     alt=""
                   />
                 </div>
               </div>
             </div>
-            <div className="mt-8 flex flex-col md:flex-row gap-8 pb-6 border-b border-[#999999] md:pb-0 md:border-none">
-              <div className="flex flex-col md:flex-1">
-                <p className="text-base font-semibold text-white">Palm Beach</p>
-                <p className="mt-1 md:mt-8 text-base font-semibold text-white opacity-80">
-                  Lançamento Imobiliário
-                  <br />
-                  <br />
-                  Palm Beach é um empreendimento imobiliário inovador e
-                  conceitual. Feito por dois grandes grupos de construtores
-                  Brasileiros, chega no mercado para trazer a beleza, a
-                  calmaria, o conforto de um resort de alto padrão, aliado a
-                  proximidade de se morar bem e de estar perto de tudo que você
-                  e sua família necessita.
-                </p>
-              </div>
-              <div className="flex flex-col md:flex-1">
-                <p className="text-base font-semibold text-white">Serviços</p>
-                <p className="mt-1 md:mt-8 text-base font-semibold text-white opacity-80">
-                  Desdobramento de Kv`s de campanhas off , criação de todo
-                  conceito visual digital e desenvolvimento , implementação e
-                  integração de Site para captação de leads qualificados.
-                </p>
-              </div>
-            </div>
-            <div className="mt-8 md:mt-32 blurred-img pb-6 border-b border-[#999999]">
-              <div
-                className="blurred-img w-full h-full"
-                style={{
-                  backgroundImage:
-                    "url(/img/palmBeach/casePage/image3-small.jpg)",
-                }}
-              >
-                <img
-                  src="/img/palmBeach/casePage/image3.jpg"
-                  className="h-full w-full object-cover"
-                  alt=""
-                />
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </>
 
       <section className="px-6 py-14 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto section05">
         <h5 className="text-sm uppercase py-2">

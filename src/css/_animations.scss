@@ -1,87 +1,145 @@
-.topBarCase1{
+.topBarCase1 {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
   width: 100%;
   height: 5px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   z-index: 11;
   animation: case01 6s infinite linear;
 }
 
-@keyframes case01{
-  from{
+@keyframes case01 {
+  from {
     width: 0%;
   }
-  to{
+  to {
+    width: 100%;
+  }
+}
+@keyframes case03 {
+  from {
+    width: 0%;
+  }
+  to {
     width: 100%;
   }
 }
 
-.palmBeachCase{
+.palmBeachCase {
   animation: case01Palm 12s infinite linear;
 }
-@keyframes case01Motion{
-  0%,45%,100%{
+@keyframes case01Motion {
+  0%,
+  45%,
+  100% {
     opacity: 1;
   }
-  50%, 95%{
+  50%,
+  95% {
     opacity: 0;
   }
 }
-.motionInsiderCase{
+.motionInsiderCase {
   animation: case01Motion 12s infinite linear;
 }
-@keyframes case01Palm{
-  0%,45%,100%{
+@keyframes case01Palm {
+  0%,
+  45%,
+  100% {
     opacity: 0;
     pointer-events: none;
   }
-  50%, 95%{
+  50%,
+  95% {
     opacity: 1;
     pointer-events: all;
   }
 }
-.topBarCase2{
+.topBarCase2 {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
   width: 100%;
   height: 5px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   z-index: 11;
   animation: case01 6s infinite 2s linear;
 }
 
-.bpoClassCase{
+.bpoClassCase {
   animation: case01Motion 12s infinite 2s linear;
 }
-.candyLipsCase{
+.candyLipsCase {
   animation: case01Palm 12s infinite 2s linear;
 }
-.topBarCase3{
+.topBarCase3 {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
   width: 100%;
   height: 5px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   z-index: 11;
-  animation: case01 6s infinite 4s linear;
+  animation: case03 6s infinite 4s linear;
 }
 
-.ordemCase{
-  animation: case01Motion 12s infinite 4s linear;
+.ordemCase {
+  animation: case01Ordem 18s infinite 4s linear;
 }
-.bernardoCase{
-  animation: case01Palm 12s infinite 4s linear;
+.bernardoCase {
+  animation: case01Bernardo 18s infinite 4s linear;
+}
+.pyongCase {
+  animation: case01Pyong 18s infinite 4s linear;
 }
 
-.heroButton{
-  @media (min-width: 768px){
+@keyframes case01Ordem {
+  0%,
+  30% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes case01Bernardo {
+  0%,
+  30%,
+  66%,
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  33%,
+  63% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+@keyframes case01Pyong {
+  0%,
+  63%,
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  66%,
+  99% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.heroButton {
+  @media (min-width: 768px) {
     position: absolute;
     top: var(--mouse-y);
     left: var(--mouse-x);
@@ -89,67 +147,65 @@
     transform-origin: center;
   }
 }
-@media (min-width: 768px){
-  .section06:hover{
+@media (min-width: 768px) {
+  .section06:hover {
     cursor: none;
   }
 }
 
-
-.letsTalkOverlay{
+.letsTalkOverlay {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 80px;
-  transform: translate(0%,0%);
+  transform: translate(0%, 0%);
   @media (min-width: 768px) {
     width: auto;
     top: var(--mouse-y);
     left: var(--mouse-x);
     transition: 0.5s scale ease;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
-.mask-button-text{
+.mask-button-text {
   overflow: hidden;
   position: relative;
-  p{
+  p {
     transition: 500ms all ease;
   }
 
-  .second-text{
+  .second-text {
     position: absolute;
     top: 110%;
     left: 0;
   }
-
 }
 
-.maskButtonAnim{
-  &:hover{
-    .first-text{
+.maskButtonAnim {
+  &:hover {
+    .first-text {
       transform: translateY(-100%);
     }
-    .second-text{
+    .second-text {
       top: 0;
     }
   }
 }
 
-.caseThumb{
+.caseThumb {
   transition: 500ms all ease;
   filter: saturate(0.1) brightness(0.2);
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     filter: saturate(1) brightness(1);
   }
 }
 
-.mainCase:hover .caseThumb{
+.mainCase:hover .caseThumb {
   filter: saturate(1) brightness(1);
 }
 
-.texts-infinite{
+.texts-infinite {
   animation: 35s slide infinite linear;
 }
 

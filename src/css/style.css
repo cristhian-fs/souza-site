@@ -88,6 +88,14 @@
     width: 100%;
   }
 }
+@keyframes case03 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 .palmBeachCase {
   animation: case01Palm 12s infinite linear;
 }
@@ -143,17 +151,51 @@
   height: 5px;
   background: rgba(255, 255, 255, 0.8);
   z-index: 11;
-  animation: case01 6s infinite 4s linear;
+  animation: case03 6s infinite 4s linear;
 }
 
 .ordemCase {
-  animation: case01Motion 12s infinite 4s linear;
+  animation: case01Ordem 18s infinite 4s linear;
 }
 
 .bernardoCase {
-  animation: case01Palm 12s infinite 4s linear;
+  animation: case01Bernardo 18s infinite 4s linear;
 }
 
+.pyongCase {
+  animation: case01Pyong 18s infinite 4s linear;
+}
+
+@keyframes case01Ordem {
+  0%, 30% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  33%, 100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@keyframes case01Bernardo {
+  0%, 30%, 66%, 100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  33%, 63% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+@keyframes case01Pyong {
+  0%, 63%, 100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  66%, 99% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
 @media (min-width: 768px) {
   .heroButton {
     position: absolute;
@@ -1636,6 +1678,10 @@ input[type=radio]:checked + label.button {
 
 .blurred-img.loaded img {
   opacity: 1;
+}
+
+.word {
+  white-space: nowrap;
 }
 
 #services,

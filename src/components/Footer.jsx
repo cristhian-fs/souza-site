@@ -21,8 +21,8 @@ export default function Footer() {
               </h4>
               {/* TO DO: LINK DO WHATSAPP */}
               <a href="https://wa.me/5531975053019?text=Olá+Souza%2C+eu+gostaria+de+um+orçamento">
-                <button className="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-2 md:mt-2 group transition-all duration-300 maskButtonAnim">
-                  <div className="mask-button-text">
+                <button className="w-auto px-8 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-2 md:mt-2 group transition-all duration-300 maskButtonAnim">
+                  <div className="mask-button-text whitespace-nowrap">
                     <p className="text-[#08060C] first-text">
                       Entrar em contato
                     </p>

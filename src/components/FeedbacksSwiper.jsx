@@ -65,7 +65,11 @@ export default function FeedbacksSwiper() {
                 className="blurred-img w-full h-full overflow-hidden"
                 style={{ backgroundImage: `url(${testimonial.smallImage})` }}
               >
-                <img src={testimonial.image} className="rounded" alt="" />
+                <img
+                  src={testimonial.image}
+                  className="rounded h-full object-cover"
+                  alt=""
+                />
               </div>
 
               <div className="flex items-center justify-between mt-4">

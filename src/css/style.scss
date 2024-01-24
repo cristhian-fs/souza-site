@@ -591,6 +591,10 @@ input[type="radio"]:checked + label.button {
   opacity: 1;
 }
 
+.word {
+  white-space: nowrap;
+}
+
 #services,
 #cases,
 #about {

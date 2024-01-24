@@ -87,56 +87,58 @@ export default function Cases() {
             <div className="relative md:flex md:flex-wrap">
               {/* CASE LEVI MOTION */}
               <div className="mainCase mt-8 md:flex-1">
-                <div className="mainCaseThumb flex flex-col justify-end align-center">
-                  <div className="motionInsider absolute inset-0 caseThumb">
-                    <span className="motionInsiderOverlay" />
-                    <img
-                      src="/img/motionInsiderAssets/HERO.webp"
-                      className="heroImg"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/RedVector.svg"
-                      className="redVector"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/linha2.svg"
-                      className="lineMotion"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/overlayLogoReduzida.png"
-                      className="overlayLogo"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/logoReduzida.png"
-                      className="backTextSmallLogo"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/logoReduzida.png"
-                      className="backSmallLogo"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/logoReduzida.png"
-                      className="backSmallLogo2"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/ELIPSE.svg"
-                      className="elipseOverlay"
-                      alt=""
-                    />
-                    <img
-                      src="/img/motionInsiderAssets/overlayCruzEsq.svg"
-                      className="overlayCruzEsq"
-                      alt=""
-                    />
+                <a href="/case-motion-insider">
+                  <div className="mainCaseThumb flex flex-col justify-end align-center">
+                    <div className="motionInsider absolute inset-0 caseThumb">
+                      <span className="motionInsiderOverlay" />
+                      <img
+                        src="/img/motionInsiderAssets/HERO.webp"
+                        className="heroImg"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/RedVector.svg"
+                        className="redVector"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/linha2.svg"
+                        className="lineMotion"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/overlayLogoReduzida.png"
+                        className="overlayLogo"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/logoReduzida.png"
+                        className="backTextSmallLogo"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/logoReduzida.png"
+                        className="backSmallLogo"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/logoReduzida.png"
+                        className="backSmallLogo2"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/ELIPSE.svg"
+                        className="elipseOverlay"
+                        alt=""
+                      />
+                      <img
+                        src="/img/motionInsiderAssets/overlayCruzEsq.svg"
+                        className="overlayCruzEsq"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
                   <div>
                     <p className="text-base font-semibold">
@@ -159,20 +161,22 @@ export default function Cases() {
             <div className="relative md:flex md:flex-wrap md:gap-8 md:pb-6 md:border-b md:border-[#999999]">
               {/* CASE PALMBEACH */}
               <div className="mainCase z-10 md:flex-1 mt-8">
-                <div className="mainCaseThumb flex flex-col justify-end align-center">
-                  <div className="palmBeach absolute inset-0 caseThumb">
-                    <img
-                      src="/img/palmBeach/FOTO FAMILIA.webp"
-                      className="palmBeachFoto"
-                      alt=""
-                    />
-                    <img
-                      src="/img/palmBeach/setas-palm-beach.svg"
-                      className="palmBeachArrows"
-                      alt=""
-                    />
+                <a href="/case-palm-beach">
+                  <div className="mainCaseThumb flex flex-col justify-end align-center">
+                    <div className="palmBeach absolute inset-0 caseThumb">
+                      <img
+                        src="/img/palmBeach/FOTO FAMILIA.webp"
+                        className="palmBeachFoto"
+                        alt=""
+                      />
+                      <img
+                        src="/img/palmBeach/setas-palm-beach.svg"
+                        className="palmBeachArrows"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="mt-6 flex items-end justify-between pb-6 md:pb-0 border-b border-[#999999] md:border-none">
                   <div>
                     <p className="text-base font-semibold">Palm Beach</p>
@@ -193,16 +197,18 @@ export default function Cases() {
               </div>
               {/* CASE CANDY LIPS */}
               <div className="mainCase md:flex-1 mt-8">
-                <div className="mainCaseThumb flex flex-col justify-end align-center">
-                  <div className="absolute inset-0 caseThumb">
-                    <span className="candyLipsOverlay" />
-                    <img
-                      src="img/CandyLips/candyLips.webp"
-                      className="w-full h-full object-cover"
-                      alt=""
-                    />
+                <a href="/case-candy-lips">
+                  <div className="mainCaseThumb flex flex-col justify-end align-center">
+                    <div className="absolute inset-0 caseThumb">
+                      <span className="candyLipsOverlay" />
+                      <img
+                        src="img/CandyLips/candyLips.webp"
+                        className="w-full h-full object-cover"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                   <div>
                     <p className="text-2xl font-medium text-[#F3F3F2]">
@@ -227,16 +233,18 @@ export default function Cases() {
             <div className="relative md:flex md:flex-wrap md:gap-8 md:pb-6 md:border-b md:border-[#999999]">
               {/* CASE GABI */}
               <div className="mainCase md:flex-1 mt-8">
-                <div className="mainCaseThumb flex flex-col justify-end align-center">
-                  <div className="absolute inset-0 caseThumb">
-                    <span className="w-full h-full absolute inset-0 bg-gradient-to-t from-black to-transparent" />
-                    <img
-                      src="img/AOrdemThumb.webp"
-                      className="w-full h-full object-cover"
-                      alt=""
-                    />
+                <a href="/case-a-ordem">
+                  <div className="mainCaseThumb flex flex-col justify-end align-center">
+                    <div className="absolute inset-0 caseThumb">
+                      <span className="w-full h-full absolute inset-0 bg-gradient-to-t from-black to-transparent" />
+                      <img
+                        src="img/AOrdemThumb.webp"
+                        className="w-full h-full object-cover"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                   <div>
                     <p className="text-2xl font-medium">Gabi Cervantes</p>
@@ -257,15 +265,17 @@ export default function Cases() {
               </div>
               {/* CASE BPO */}
               <div className="mainCase md:flex-1 mt-8">
-                <div className="mainCaseThumb flex flex-col justify-end align-center">
-                  <div className="absolute inset-0 caseThumb">
-                    <img
-                      src="img/BPO Class Thumb.webp"
-                      className="w-full h-full object-cover"
-                      alt=""
-                    />
+                <a href="/case-bpo-class">
+                  <div className="mainCaseThumb flex flex-col justify-end align-center">
+                    <div className="absolute inset-0 caseThumb">
+                      <img
+                        src="img/BPO Class Thumb.webp"
+                        className="w-full h-full object-cover"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                   <div>
                     <p className="text-2xl font-medium text-[#F3F3F2]">
@@ -290,16 +300,18 @@ export default function Cases() {
             <div className="relative md:flex md:flex-wrap md:gap-8 md:pb-6 md:border-b md:border-[#999999]">
               {/* CASE PYONG */}
               <div className="mainCase md:flex-1 mt-8">
-                <div className="mainCaseThumb flex flex-col justify-end align-center">
-                  <div className="absolute inset-0 caseThumb">
-                    <span className="mviOverlay" />
-                    <img
-                      src="img/pyongLee/pyongLeeImage.jpg"
-                      className="w-full h-full object-cover"
-                      alt=""
-                    />
+                <a href="/case-pyong-lee">
+                  <div className="mainCaseThumb flex flex-col justify-end align-center">
+                    <div className="absolute inset-0 caseThumb">
+                      <span className="mviOverlay" />
+                      <img
+                        src="img/pyongLee/pyongLeeImage.jpg"
+                        className="w-full h-full object-cover"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                   <div>
                     <p className="text-2xl font-medium">
@@ -322,21 +334,21 @@ export default function Cases() {
               </div>
               {/* CASE BERNARDO */}
               <div className="mainCase md:flex-1 mt-8">
-                <div className="mainCaseThumb flex flex-col justify-end align-center">
-                  <div className="absolute inset-0 caseThumb">
-                    <span className="mviOverlay" />
-                    <img
-                      src="img/bernandoCaetano/bernardoCaetano.jpg"
-                      className="w-full h-full object-cover"
-                      alt=""
-                    />
+                <a href="/case-bernardo">
+                  <div className="mainCaseThumb flex flex-col justify-end align-center">
+                    <div className="absolute inset-0 caseThumb">
+                      <span className="mviOverlay" />
+                      <img
+                        src="img/bernandoCaetano/bernardoCaetano.jpg"
+                        className="w-full h-full object-cover"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999] md:border-none">
                   <div>
-                    <p className="text-2xl font-medium">
-                      Bernardo Caetano I Agência Tucano
-                    </p>
+                    <p className="text-2xl font-medium">Agência Tucano</p>
                     <p className="text-base opacity-80 mt-1">
                       Ui Design Landing Page
                     </p>

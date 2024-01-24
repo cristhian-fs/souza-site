@@ -10,9 +10,7 @@ import { useGSAP } from "@gsap/react";
 // icons
 import { CloseMenuIcon } from "../svg/CloseMenuIcon";
 import { ArrowBottomRight } from "../svg/ArrowBottomRight";
-
-// smooth scroll
-// import Lenis from "@studio-freight/lenis";
+import Lenis from "@studio-freight/lenis/types";
 
 const Header = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -25,16 +23,6 @@ const Header = () => {
     e.preventDefault();
     setIsMenuOpen(!isMenuOpen);
   }
-
-  // const lenis = new Lenis();
-
-  // lenis.on("scroll", ScrollTrigger.update);
-
-  // gsap.ticker.add((time) => {
-  //   lenis.raf(time * 1000);
-  // });
-
-  // gsap.ticker.lagSmoothing(0);
 
   useGSAP(() => {
     const headerOptionsButton = gsap.utils.toArray(".headerOptionsButton");
@@ -99,7 +87,7 @@ const Header = () => {
         </div>
         <div className="mt-4">
           <div className="border-b border-b-black overflow-hidden">
-            <a href="#hero">
+            <a href="/#hero">
               <button className="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
                 <p className="text-base text-black transition-all duration-300 group-hover:translate-x-2">
                   Home
