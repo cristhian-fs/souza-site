@@ -45,10 +45,14 @@ export default function CaseCandyLips() {
             autoPlay={true}
             muted={true}
             loop={true}
-            src="/img/herovideo.mp4"
-            type="video/mp4"
-            id="heroVideo"
-          ></video>
+          >
+            <source
+              src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
+              type="video/mp4"
+              id="heroVideo"
+            />
+            Seu navegador não suporta ao elemento de vídeo
+          </video>
         </div>
         <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
           <h1 className="text-5xl md:text-8xl revealHeroText">
