@@ -139,10 +139,6 @@ html.lenis {
 .extraContent {
   overflow: hidden;
   transition: 500ms all ease;
-  max-height: 0px;
-}
-.extraContent.active {
-  max-height: 1000px;
 }
 
 .toggleContent {

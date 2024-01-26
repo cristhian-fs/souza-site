@@ -23,7 +23,7 @@ export default function FeedbacksSwiper() {
       image: "/img/feedbackPhoto01.jpg",
       smallImage: "/img/feedbackPhoto01-small.jpg",
       description:
-        "Já trabalho com o Souza em vários projetos. Fizemos 3 projetos neste tempo juntos. Ele é um cara incrível, super cumpre prazos, o pra mim é essencial. Já entreguei diversos desafios nas mãos dele, e eu tenho uma certa exigência visual, e ele sempre consegue me surpreender e entregar além daquilo que foi combinado, que é excelente, né? Eu sempre acredito e acredito muito, defendo muito que o visual vende e vende muito, então pra mim é sempre muito importante ter algo de extrema qualidade e é extremamente isso que o Souza entrega.Eu super recomendo ele para todos que conheço. Um cara extremamente capaz.",
+        "Já trabalhei com o Souza em vários projetos. Fizemos 3 projetos neste tempo juntos. Ele é um cara incrível, super cumpre prazos, o pra mim é essencial. Já entreguei diversos desafios nas mãos dele, e eu tenho uma certa exigência visual, e ele sempre consegue me surpreender e entregar além daquilo que foi combinado, que é excelente, né? Eu sempre acredito e acredito muito, defendo muito que o visual vende e vende muito, então pra mim é sempre muito importante ter algo de extrema qualidade e é extremamente isso que o Souza entrega.Eu super recomendo ele para todos que conheço. Um cara extremamente capaz.",
     },
     {
       name: "Levi",

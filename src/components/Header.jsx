@@ -29,15 +29,29 @@ const Header = () => {
 
     if (headerOptionsButton) {
       gsap.set(headerOptionsButton, {
-        y: -100,
+        y: -50,
       });
     }
+
+    gsap.set(headerOptions.current, {
+      opacity: 0,
+      pointerEvents: "none",
+    });
+
     if (isMenuOpen) {
       gsap.to(headerOptionsButton, {
         y: 0,
-        stagger: 0.4,
-        duration: 1,
-        ease: "power3.out",
+        stagger: 0.2,
+        duration: 1.25,
+        ease: "none",
+        delay: 0,
+      });
+
+      gsap.to(headerOptions.current, {
+        opacity: 1,
+        pointerEvents: "all",
+        duration: 0.5,
+        ease: "none",
       });
     }
   }, null);
@@ -68,18 +82,13 @@ const Header = () => {
         </div>
       </header>
       <div
-        className={`headerOptions ${
-          isMenuOpen ? "is-active" : ""
-        } rounded-2xl md:hidden`}
+        className={`headerOptions rounded-2xl md:hidden`}
         ref={headerOptions}
       >
         <div className="w-full flex items-center justify-end p-8">
           <button
             className="closeMenuMobile flex items-center gap-2"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsMenuOpen(false);
-            }}
+            onClick={(e) => handleMenu(e)}
           >
             <CloseMenuIcon className="w-4 h-4" />
             <p className="text-base text-black">Fechar menu</p>

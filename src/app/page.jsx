@@ -552,7 +552,10 @@ export default function Home() {
           muted={true}
           loop={true}
         >
-          <source src="/img/herovideo.mp4" type="video/mp4" />
+          <source
+            src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
+            type="video/mp4"
+          />
           Seu navegador não suporta o elemento de vídeo.
         </video>
         <h2 className="text-3xl uppercase first-line:block first-line:text-right md:hidden secondHeader relative z-10">

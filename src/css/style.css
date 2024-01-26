@@ -8,15 +8,8 @@
   position: fixed;
   top: 96px;
   right: 24px;
-  transition: 700ms all ease;
+  transition: 1000ms all ease;
   z-index: 99;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.headerOptions.is-active {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .navOptionsDesktop {
@@ -1243,11 +1236,6 @@ html.lenis {
 .extraContent {
   overflow: hidden;
   transition: 500ms all ease;
-  max-height: 0px;
-}
-
-.extraContent.active {
-  max-height: 1000px;
 }
 
 .toggleContent {

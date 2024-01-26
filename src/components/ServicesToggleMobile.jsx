@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { SitesIcon } from "../svg/SitesIcon";
 import { IDVisual } from "../svg/IDVisual";
@@ -36,11 +36,40 @@ const ServicosToggleMobile = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null);
+  useEffect(() => {
+    // FUNCTION TO OPEN TOGGLE OPTIONS
+    const toggleButtons = document.querySelectorAll(".toggleButton");
+    const toggleContents = document.querySelectorAll(".toggleContent");
+    const extraContents = document.querySelectorAll(".extraContent");
 
-  const handleToggleContent = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-  };
+    // Inicializando alturas máximas para 0
+    extraContents.forEach((item) => {
+      item.style.maxHeight = 0;
+    });
+
+    function handleToggleContent(index) {
+      toggleContents.forEach((contentItem, contentIndex) => {
+        contentItem.classList.toggle("active", contentIndex === index);
+      });
+
+      extraContents.forEach((extraContent, extraContentIndex) => {
+        if (extraContentIndex === index) {
+          extraContent.style.maxHeight = extraContent.scrollHeight + "px";
+          extraContent.classList.add("mt-4");
+        } else {
+          extraContent.style.maxHeight = 0;
+          extraContent.classList.remove("mt-4");
+        }
+      });
+    }
+
+    toggleButtons.forEach((button, index) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        handleToggleContent(index);
+      });
+    });
+  }, []);
 
   return (
     <section
@@ -51,37 +80,18 @@ const ServicosToggleMobile = () => {
         <span className="text-[#4F4F4F]">02 / </span>Nossos serviços
       </h5>
       {services.map((service, index) => (
-        <div
-          key={index}
-          className={`toggleContent pt-6 pb-8 ${
-            activeIndex === index ? "active" : ""
-          }`}
-        >
-          <div
-            className={`toggleButton flex items-center justify-between ${
-              activeIndex === index ? "toggleButton-active" : ""
-            }`}
-            onClick={() => handleToggleContent(index)}
-          >
+        <div key={index} className={`toggleContent pt-6 pb-8`}>
+          <div className={`toggleButton flex items-center justify-between`}>
             <div className="flex items-center gap-4">
               {service.icon}
               <p className="text-xl md:text-3xl toggleServiceName">
                 {service.title}
               </p>
             </div>
-            <ArrowBottomRight
-              className={`arrowToggle h-6 w-6 ${
-                activeIndex === index ? "arrowToggle-active" : ""
-              }`}
-              alt=""
-            />
+            <ArrowBottomRight className={`arrowToggle h-6 w-6`} alt="" />
           </div>
 
-          <p
-            className={`text-base md:text-2xl extraContent ${
-              activeIndex === index ? "active mt-4" : ""
-            }`}
-          >
+          <p className={`text-base md:text-2xl extraContent`}>
             {service.content}
           </p>
           <span className="contentAsideBar" />
