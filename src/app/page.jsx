@@ -496,7 +496,7 @@ export default function Home() {
             muted
             loop
             playsInline
-            poster="/img/thumb.png"
+            // poster="/img/thumb.png"
           >
             <source
               src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
