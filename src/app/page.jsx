@@ -495,12 +495,14 @@ export default function Home() {
             autoPlay={true}
             muted={true}
             loop={true}
+            playsInline
           >
             <source
               src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
               type="video/mp4"
               id="heroVideo"
             />
+            <source src="/img/herovideo.webm" type="video/webm" />
             Seu navegador não suporta ao elemento de vídeo
           </video>
         </div>
