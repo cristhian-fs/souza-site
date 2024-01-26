@@ -492,9 +492,9 @@ export default function Home() {
         <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
           <video
             className="w-full h-full object-cover"
-            autoPlay={true}
-            muted={true}
-            loop={true}
+            autoPlay="autoplay"
+            muted
+            loop
             playsInline
           >
             <source
