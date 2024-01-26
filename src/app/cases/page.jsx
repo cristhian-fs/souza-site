@@ -33,10 +33,10 @@ export default function Cases() {
         <Header />
         {/* HERO */}
         <main
-          className="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden"
+          className="h-auto py-24 flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden"
           id="hero"
         >
-          <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
+          <div className="w-full h-[146px] md:h-full md:absolute md:inset-0 flex items-center justify-center">
             <video
               className="w-full h-full object-cover"
               autoPlay
@@ -55,26 +55,9 @@ export default function Cases() {
             </video>
           </div>
           <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
-            <h1 className="text-5xl md:text-8xl revealHeroText">
-              USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS
+            <h1 className="mt-8 md:mt-0 text-5xl md:text-8xl revealHeroText">
+              Veja alguns projetos de sucesso que desenvolvemos
             </h1>
-            <a href="#cases">
-              <button className="w-full md:w-auto px-12 py-4 gradient-button flex items-center justify-center gap-3 rounded-full mt-10 md:mt-0 md:hidden maskButtonAnim group transition-all duration-300">
-                <div className="mask-button-text whitespace-nowrap">
-                  <p className="text-[#08060C] first-text">See project</p>
-                  <p className="text-[#08060C] second-text">See project</p>
-                </div>
-                <img
-                  src="/svg/right-arrow-button.svg"
-                  className="transition-all duration-300 group-hover:translate-x-2"
-                  alt=""
-                />
-              </button>
-            </a>
-            <div className="flex items-center justify-center gap-2 mt-12 md:absolute md:bottom-0 md:right-0">
-              <p className="">Scroll</p>
-              <img src="/svg/down-arrow.svg" alt="" />
-            </div>
           </div>
         </main>
         {/* SECTION CASES */}
