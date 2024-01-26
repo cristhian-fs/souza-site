@@ -35,39 +35,6 @@ export default function CasePyongLee() {
     <>
       <Header />
       <>
-        {/* HERO */}
-        <main
-          className="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden"
-          id="hero"
-        >
-          <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
-            <video
-              className="w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/img/thumb.png"
-            >
-              <source
-                src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
-                type="video/mp4"
-                id="heroVideo"
-              />
-              <source src="/img/herovideo.webm" type="video/webm" />
-              Seu navegador não suporta ao elemento de vídeo
-            </video>
-          </div>
-          <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
-            <h1 className="text-5xl md:text-8xl revealHeroText">
-              USANDO O DESIGN PARA POTENCIALIZAR RESULTADOS
-            </h1>
-            <div className="flex items-center justify-center gap-2 mt-12 md:absolute md:bottom-0 md:right-0">
-              <p className="">Scroll</p>
-              <img src="/svg/down-arrow.svg" alt="" />
-            </div>
-          </div>
-        </main>
         {/* SECTION CASE */}
         <section
           className="px-6 py-14 md:py-36 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto"
