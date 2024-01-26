@@ -39,17 +39,18 @@ export default function Cases() {
           <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
             <video
               className="w-full h-full object-cover"
-              autoPlay={true}
-              muted={true}
-              loop={true}
-              type="video/mp4"
-              id="heroVideo"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/img/thumb.png"
             >
               <source
                 src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
                 type="video/mp4"
                 id="heroVideo"
               />
+              <source src="/img/herovideo.webm" type="video/webm" />
               Seu navegador não suporta ao elemento de vídeo
             </video>
           </div>

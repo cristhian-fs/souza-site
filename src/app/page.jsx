@@ -492,10 +492,11 @@ export default function Home() {
         <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
           <video
             className="w-full h-full object-cover"
-            autoPlay="autoplay"
+            autoPlay
             muted
             loop
             playsInline
+            poster="/img/thumb.png"
           >
             <source
               src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
