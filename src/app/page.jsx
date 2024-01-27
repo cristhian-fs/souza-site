@@ -16,7 +16,7 @@ import { DownArrow } from "../svg/DownArrow";
 import { RightArrowButton } from "../svg/RightArrowButton";
 import { FullProject } from "../svg/FullProject";
 import { ArrowDownFullProject } from "../svg/ArrowDownFullProject";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 
 // COMPONENTS
@@ -458,6 +458,21 @@ export default function Home() {
     };
   }, []);
 
+  const refVideo = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    if (!refVideo.current) {
+      return;
+    }
+
+    if (isMuted) {
+      //open bug since 2017 that you cannot set muted in video element https://github.com/facebook/react/issues/10389
+      refVideo.current.defaultMuted = true;
+      refVideo.current.muted = true;
+    }
+  }, []);
+
   return (
     <>
       {/* LOADING SCREEN */}
@@ -492,10 +507,11 @@ export default function Home() {
         <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
           <video
             className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
+            autoPlay={true}
+            muted="true"
+            loop={true}
             playsInline
+            ref={refVideo}
             // poster="/img/thumb.png"
           >
             <source
