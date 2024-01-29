@@ -11,7 +11,7 @@ import FeedbacksSwiper from "../../components/FeedbacksSwiper";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Cases() {
   useEffect(() => {
@@ -25,6 +25,21 @@ export default function Cases() {
     }
 
     requestAnimationFrame(raf);
+  }, []);
+
+  const refVideo = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    if (!refVideo.current) {
+      return;
+    }
+
+    if (isMuted) {
+      //open bug since 2017 that you cannot set muted in video element https://github.com/facebook/react/issues/10389
+      refVideo.current.defaultMuted = true;
+      refVideo.current.muted = true;
+    }
   }, []);
 
   return (
@@ -43,6 +58,7 @@ export default function Cases() {
               muted
               loop
               playsInline
+              ref={refVideo}
               poster="/img/thumb.png"
             >
               <source
