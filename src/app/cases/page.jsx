@@ -53,10 +53,11 @@ export default function Cases() {
         >
           <div className="w-full h-[146px] md:h-full md:absolute md:inset-0 flex items-center justify-center">
             <video
-              playsInline
+              playsInline={true}
               className="w-full h-full object-cover"
-              autoPlay
-              loop
+              autoPlay={true}
+              loop={true}
+              muted={true}
               ref={refVideo}
               // poster="/img/thumb.png"
             >

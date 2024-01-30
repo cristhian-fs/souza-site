@@ -494,10 +494,11 @@ export default function Home() {
         </a>
         <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
           <video
-            playsInline
+            playsInline={true}
             className="w-full h-full object-cover"
-            autoPlay
-            loop
+            autoPlay={true}
+            loop={true}
+            muted={true}
             ref={refVideo}
             // poster="/img/thumb.png"
           >
