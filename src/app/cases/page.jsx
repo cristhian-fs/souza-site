@@ -56,7 +56,6 @@ export default function Cases() {
               playsInline
               className="w-full h-full object-cover"
               autoPlay
-              muted
               loop
               ref={refVideo}
               // poster="/img/thumb.png"
