@@ -504,10 +504,7 @@ export default function Home() {
             <RightArrowButton className="w-5 h-5 transition-all duration-300 group-hover:translate-x-2" />
           </button>
         </a>
-        <div
-          className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo"
-          style={{ backgroundImage: "url(/img/herovideo.mp4)" }}
-        >
+        <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
           <video
             className="w-full h-full object-cover"
             autoPlay
