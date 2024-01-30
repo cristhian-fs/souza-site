@@ -30,17 +30,17 @@ export default function Cases() {
   const refVideo = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
 
-  useEffect(() => {
-    if (!refVideo.current) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (!refVideo.current) {
+  //     return;
+  //   }
 
-    if (isMuted) {
-      //open bug since 2017 that you cannot set muted in video element https://github.com/facebook/react/issues/10389
-      refVideo.current.defaultMuted = true;
-      refVideo.current.muted = true;
-    }
-  }, []);
+  //   if (isMuted) {
+  //     //open bug since 2017 that you cannot set muted in video element https://github.com/facebook/react/issues/10389
+  //     refVideo.current.defaultMuted = true;
+  //     refVideo.current.muted = true;
+  //   }
+  // }, []);
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function Cases() {
               muted
               loop
               ref={refVideo}
-              poster="/img/thumb.png"
+              // poster="/img/thumb.png"
             >
               <source
                 src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
