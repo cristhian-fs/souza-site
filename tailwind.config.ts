@@ -20,7 +20,7 @@ const config: Config = {
         xl: "1216px",
       },
       fontFamily: {
-        sans: ['"Suisse Intl"', "helvetica", "sans-serif"],
+        sans: ["Inter", "helvetica", "sans-serif"],
         serif: ["Merriweather", "serif"],
       },
     },
