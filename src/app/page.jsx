@@ -492,8 +492,8 @@ export default function Home() {
             <RightArrowButton className="w-5 h-5 transition-all duration-300 group-hover:translate-x-2" />
           </button>
         </a>
-        <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo">
-          <video
+        <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo pointer-events-none">
+          {/* <video
             playsInline={true}
             className="w-full h-full object-cover"
             autoPlay={true}
@@ -509,7 +509,14 @@ export default function Home() {
             />
             <source src="/img/herovideo.webm" type="video/webm" />
             Seu navegador não suporta ao elemento de vídeo
-          </video>
+          </video> */}
+          <iframe
+            src="https://youtube.com/embed/MbGwBXllf4M?autoplay=1&mute=1&loop=1&playlist=MbGwBXllf4M&controls=0&playsinline=1&rel=0"
+            width={1920}
+            height={1080}
+            frameborder="0"
+            className="w-full h-full object-cover"
+          ></iframe>
         </div>
         <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
           <h1 className="text-5xl md:text-8xl revealHeroText">

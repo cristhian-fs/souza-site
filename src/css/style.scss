@@ -132,6 +132,11 @@ html.lenis {
   }
 }
 
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .text-with-right-aligned-first-line::first-line {
   text-align: right;
 }
