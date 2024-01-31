@@ -38,14 +38,14 @@ export default function Footer() {
           <div className="flex flex-wrap md:flex-col md:items-start justify-between items-center gap-4 mt-20 md:mt-0 md:flex-auto md:flex-grow-0 md:w-auto">
             <div className="order-2 md:order-1">
               <p className="text-sm">Email</p>
-              <a href="mailto:Hello@davidsonsouza.com">
+              <a href="mailto:contato@souzadesigner.com">
                 <button className="transition-all duration-300 maskButtonAnim">
                   <div className="mask-button-text mt-2">
                     <p className="text-[#828282] first-text">
-                      Hello@davidsonsouza.com
+                      contato@souzadesigner.com
                     </p>
                     <p className="text-[#828282] second-text">
-                      Hello@davidsonsouza.com
+                      contato@souzadesigner.com
                     </p>
                   </div>
                 </button>
