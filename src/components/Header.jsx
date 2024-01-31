@@ -116,7 +116,7 @@ const Header = () => {
             </a>
           </div>
           <div className="border-b border-b-black overflow-hidden">
-            <a href="/#cases">
+            <a href="/cases">
               <button className="w-full flex items-center justify-between px-8 py-4 headerOptionsButton group transition-all duration-300">
                 <p className="text-base text-black transition-all duration-300 group-hover:translate-x-2">
                   Cases
@@ -182,7 +182,7 @@ const Header = () => {
           <p className="text-base">Serviços</p>
         </a>
         <a
-          href="/#cases"
+          href="/cases"
           className="px-5 py-3 group transition-all duration-300 hover:opacity-70"
         >
           <p className="text-base">Cases</p>
