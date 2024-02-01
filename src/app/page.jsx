@@ -11,6 +11,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FeedbacksSwiper from "../components/FeedbacksSwiper";
 import VimeoEmbed from "../components/VideoEmbed";
+import VimeoEmbedMobile from "../components/VideoEmbedMobile";
 
 // ICONS
 import { DownArrow } from "../svg/DownArrow";
@@ -19,6 +20,7 @@ import { FullProject } from "../svg/FullProject";
 import { ArrowDownFullProject } from "../svg/ArrowDownFullProject";
 import React, { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
+import { LogoHeader } from "../svg/SouzaLogo";
 
 // COMPONENTS
 import ServicosToggleDesktop from "../components/ServicesToggleDesktop";
@@ -472,7 +474,7 @@ export default function Home() {
             <div className="loadingBar" />
           </div>
           <div className="flex items-center justify-between mt-8">
-            <img src="/svg/logoHero.svg" alt="" />
+            <LogoHeader />
             <p id="numberLoading" className="text-xl" />
           </div>
         </div>
@@ -494,25 +496,7 @@ export default function Home() {
           </button>
         </a>
         <div className="w-full h-auto md:h-full absolute inset-0 flex items-center justify-center">
-          {/* <video
-            playsInline={true}
-            className="w-full h-full object-cover"
-            autoPlay={true}
-            loop={true}
-            muted={true}
-            ref={refVideo}
-            // poster="/img/thumb.png"
-          >
-            <source
-              src="https://videosouza-destination920a3c57-hr7vq0ozjdev.s3.amazonaws.com/herovideo.mp4"
-              type="video/mp4"
-              id="heroVideo"
-            />
-            <source src="/img/herovideo.webm" type="video/webm" />
-            Seu navegador não suporta ao elemento de vídeo
-          </video> */}
-
-          <VimeoEmbed />
+          {isMobile ? <VimeoEmbedMobile /> : <VimeoEmbed />}
         </div>
         <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
           <h1 className="text-5xl md:text-8xl revealHeroText">

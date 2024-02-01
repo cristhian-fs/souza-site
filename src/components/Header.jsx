@@ -10,7 +10,7 @@ import { useGSAP } from "@gsap/react";
 // icons
 import { CloseMenuIcon } from "../svg/CloseMenuIcon";
 import { ArrowBottomRight } from "../svg/ArrowBottomRight";
-import { SouzaLogo } from "../svg/SouzaLogo";
+import { LogoHeader } from "../svg/SouzaLogo";
 import Lenis from "@studio-freight/lenis/types";
 
 const Header = () => {
@@ -61,13 +61,7 @@ const Header = () => {
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#040305] to-[#04030500] md:hidden">
         <div className="flex items-center justify-between px-6 py-8 w-full">
-          <Image
-            src="/svg/SOUZA.svg"
-            className="w-24"
-            width={96}
-            height={16}
-            alt=""
-          />
+          <LogoHeader />
           <button
             className={`hamburger hamburger--spin ${
               isMenuOpen ? "is-active" : ""
@@ -152,13 +146,7 @@ const Header = () => {
 
       <header className="hidden md:block mx-auto md:max-w-screen-lg lg:max-w-screen-xl py-10 absolute top-0 left-0 right-0 z-20 w-full">
         <div className="flex items-center gap-32">
-          <Image
-            src="/img/LogoHeader.png"
-            className="w-24 flex-1"
-            width={96}
-            height={16}
-            alt=""
-          />
+          <LogoHeader className={`w-32`} />
           <p className="text-xs w-1/2 uppercase flex-shrink-0 flex-1">
             Se diferencie, aumente seus resultados
           </p>
