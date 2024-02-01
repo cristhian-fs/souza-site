@@ -6,8 +6,13 @@ const VimeoEmbed = () => {
     script.src = "https://player.vimeo.com/api/player.js";
     script.async = true;
 
-    document.body.appendChild(script);
+    script.onload = () => {
+      console.log("Vimeo Loaded");
+      let videoPlayer = document.querySelector("#player");
+      console.log(videoPlayer);
+    };
 
+    document.body.appendChild(script);
     return () => {
       document.body.removeChild(script);
     };
@@ -36,7 +41,7 @@ const VimeoEmbed = () => {
           height: "100%",
         }}
         allow="autoplay; fullscreen; picture-in-picture"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover scale-150 md:scale-100"
       ></iframe>
     </div>
   );

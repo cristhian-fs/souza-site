@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 // icons
 import { CloseMenuIcon } from "../svg/CloseMenuIcon";
 import { ArrowBottomRight } from "../svg/ArrowBottomRight";
+import { SouzaLogo } from "../svg/SouzaLogo";
 import Lenis from "@studio-freight/lenis/types";
 
 const Header = () => {
@@ -61,7 +62,7 @@ const Header = () => {
       <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#040305] to-[#04030500] md:hidden">
         <div className="flex items-center justify-between px-6 py-8 w-full">
           <Image
-            src="/img/LogoHeader.png"
+            src="/svg/SOUZA.svg"
             className="w-24"
             width={96}
             height={16}

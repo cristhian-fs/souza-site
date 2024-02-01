@@ -481,7 +481,7 @@ export default function Home() {
       <Header />
       {/* HERO */}
       <main
-        className="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden"
+        className="h-[851px] flex flex-col items-center justify-end px-6 pb-8 relative md:h-[775px] z-10 heroSection overflow-hidden bg-black"
         id="hero"
       >
         <a href="/cases" className="heroButton">

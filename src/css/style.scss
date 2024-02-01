@@ -641,3 +641,14 @@ input[type="radio"]:checked + label.button {
 .errorMsg.isError {
   display: block;
 }
+
+@media (max-width: 767px) {
+  .player .vp-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #player {
+    height: 100% !important;
+  }
+}
