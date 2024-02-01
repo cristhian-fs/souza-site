@@ -7,6 +7,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FeedbacksSwiper from "../../components/FeedbacksSwiper";
 
+import VimeoEmbed from "@/components/VideoEmbed";
+
 // smooth scroll
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
@@ -52,13 +54,7 @@ export default function Cases() {
           id="hero"
         >
           <div className="w-full h-[146px] md:h-full md:absolute md:inset-0 flex items-center justify-center">
-            <iframe
-              src="https://youtube.com/embed/MbGwBXllf4M?autoplay=1&mute=1&loop=1&playlist=MbGwBXllf4M&controls=0&playsinline=1&rel=0"
-              width={1920}
-              height={1080}
-              frameborder="0"
-              className="w-full h-full object-cover"
-            ></iframe>
+            <VimeoEmbed />
           </div>
           <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
             <h1 className="mt-8 md:mt-0 text-5xl md:text-8xl revealHeroText">

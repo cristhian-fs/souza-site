@@ -10,6 +10,7 @@ import ContactForm from "../components/forms/contact-form";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FeedbacksSwiper from "../components/FeedbacksSwiper";
+import VimeoEmbed from "../components/VideoEmbed";
 
 // ICONS
 import { DownArrow } from "../svg/DownArrow";
@@ -492,7 +493,7 @@ export default function Home() {
             <RightArrowButton className="w-5 h-5 transition-all duration-300 group-hover:translate-x-2" />
           </button>
         </a>
-        <div className="w-full h-full absolute inset-0 flex items-center justify-center heroVideo pointer-events-none">
+        <div className="w-full h-auto md:h-full absolute inset-0 flex items-center justify-center">
           {/* <video
             playsInline={true}
             className="w-full h-full object-cover"
@@ -510,13 +511,8 @@ export default function Home() {
             <source src="/img/herovideo.webm" type="video/webm" />
             Seu navegador não suporta ao elemento de vídeo
           </video> */}
-          <iframe
-            src="https://youtube.com/embed/MbGwBXllf4M?autoplay=1&mute=1&loop=1&playlist=MbGwBXllf4M&controls=0&playsinline=1&rel=0"
-            width={1920}
-            height={1080}
-            frameborder="0"
-            className="w-full h-full object-cover"
-          ></iframe>
+
+          <VimeoEmbed />
         </div>
         <div className="relative z-10 md:max-w-screen-lg lg:max-w-screen-xl md:mx-auto">
           <h1 className="text-5xl md:text-8xl revealHeroText">
@@ -655,15 +651,6 @@ export default function Home() {
                     alt=""
                   />
                 </div>
-                <div className="mainCaseSpecs pt-8 relative z-10">
-                  <img
-                    src="/img/motionInsiderAssets/logoMotionInsider.svg"
-                    alt=""
-                  />
-                  <p className="text-base text-[#F3F3F2] mt-4">
-                    Landing Page Lançamento
-                  </p>
-                </div>
               </div>
             </a>
             <div className="mt-6 flex items-end justify-between pb-6 border-b border-[#999999]">
@@ -700,12 +687,6 @@ export default function Home() {
                   />
                   <span className="palmBeachSquare" />
                 </div>
-                <div className="mainCaseSpecs md:w-80 pt-8 relative z-10">
-                  <p className="text-xl font-semibold">Palm Beach</p>
-                  <p className="text-base text-[#F3F3F2] mt-1">
-                    Site institucional
-                  </p>
-                </div>
               </div>
             </a>
 
@@ -741,12 +722,6 @@ export default function Home() {
                       alt=""
                     />
                   </div>
-                  <div className="mainCaseSpecs pt-4 relative z-10">
-                    <p className="text-2xl font-semibold text-nowrap">
-                      BPO CLASS SUMMIT
-                    </p>
-                    <p className="text-base opacity-80">Website design</p>
-                  </div>
                 </div>
               </a>
 
@@ -778,10 +753,6 @@ export default function Home() {
                       className="w-full h-full object-cover"
                       alt=""
                     />
-                  </div>
-                  <div className="mainCaseSpecs pt-4 relative z-10">
-                    <p className="text-2xl font-semibold">Candy Lips</p>
-                    <p className="text-base opacity-80">Lançamento WebSite</p>
                   </div>
                 </div>
               </a>
@@ -820,14 +791,6 @@ export default function Home() {
                       alt=""
                     />
                   </div>
-                  <div className="mainCaseSpecs pt-4 relative z-10">
-                    <p className="text-2xl font-medium text-[#F3F3F2]">
-                      A Ordem
-                    </p>
-                    <p className="text-xs text-[#F3F3F2] mt-2">
-                      Mentoria / ID Visual
-                    </p>
-                  </div>
                 </div>
               </a>
 
@@ -859,14 +822,6 @@ export default function Home() {
                       className="w-full h-full object-cover"
                       alt=""
                     />
-                  </div>
-                  <div className="mainCaseSpecs pt-4 relative z-10">
-                    <p className="text-2xl font-medium text-[#F3F3F2]">
-                      MVI - Método Infalível de Pagínas
-                    </p>
-                    <p className="text-xs text-[#F3F3F2] mt-2">
-                      Lançamento Web Site
-                    </p>
                   </div>
                 </div>
               </a>
