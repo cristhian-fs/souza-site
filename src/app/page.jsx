@@ -910,7 +910,7 @@ export default function Home() {
             construir parcerias e potencializar os resultados do seu negócio,
             <br />
             <br />
-            Seja diferente, pontencialize sua voz e gere resultados!
+            Seja diferente, potencialize sua voz e gere resultados!
           </p>
           <div className="flex items-center mt-10 gap-11">
             <div className="flex items-center gap-4">
